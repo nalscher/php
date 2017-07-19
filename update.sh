@@ -26,17 +26,25 @@ declare -A gpgKeys=(
 	# https://secure.php.net/downloads.php#gpg-5.6
 	# https://secure.php.net/gpg-keys.php#gpg-5.6
 	[5.6]='0BD78B5F97500D450838F95DFE857D9A90D90EC1 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
+	
+	# https://wiki.php.net/todo/php55
+	# jpauli & tyrael
+	# https://secure.php.net/downloads.php#gpg-5.5
+	# https://secure.php.net/gpg-keys.php#gpg-5.5
+	[5.5]='0B96609E270F565C13292B24C13C70B87267B52D 0BD78B5F97500D450838F95DFE857D9A90D90EC1'
 )
 # see https://secure.php.net/downloads.php
 
 defaultDebianSuite='stretch-slim'
 declare -A debianSuites=(
+	[5.5]='jessie'
 	[5.6]='jessie'
 	[7.0]='jessie'
 	[7.1]='jessie'
 )
 defaultAlpineVersion='3.6'
 declare -A alpineVersions=(
+	[5.5]='3.4'
 	[5.6]='3.4'
 	[7.0]='3.4'
 	[7.1]='3.4'
