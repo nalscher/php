@@ -101,6 +101,23 @@ for version in "${versions[@]}"; do
 			]
 		'
 	fi
+	
+	# force 5.5.38 for 5.5
+	if [ "5.5" == "$rcVersion" ]; then
+	   apiJqExpr='
+            (keys[] | select(startswith("5.5.38"))) as $version
+            | [ $version, (
+                .[$version].source[]
+                | select(.filename | endswith(".xz"))
+                |
+                    "https://secure.php.net/get/" + .filename + "/from/this/mirror",
+                    "https://secure.php.net/get/" + .filename + ".asc/from/this/mirror",
+                    .sha256 // "",
+                    .md5 // ""
+            ) ]
+        '
+	fi
+	
 	IFS=$'\n'
 	possibles=( $(
 		curl -fsSL "$apiUrl" \
