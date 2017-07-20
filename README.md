@@ -1,7 +1,7 @@
 # Supported tags and respective ```Dockerfile``` links
 
 
-* ```5.5.38```, ```5.5``` * [(5.5/Dockerfile)](https://github.com/nalscher/php/blob/master/5.5/Dockerfile) *
+* ```5.5.38```, ```5.5```, ```latest``` * [(5.5/Dockerfile)](https://github.com/nalscher/php/blob/master/5.5/Dockerfile) *
 * ```5.5.38-alpine```, ```5.5-alpine``` * [(5.5/alpine/Dockerfile)](https://github.com/nalscher/php/blob/master/5.5/alpine/Dockerfile) *
 * ```5.5.38-apache```, ```5.5-apache``` * [(5.5/apache/Dockerfile)](https://github.com/nalscher/php/blob/master/5.5/apache/Dockerfile) *
 * ```5.5.38-fpm```, ```5.5-fpm``` * [(5.5/fpm/Dockerfile)](https://github.com/nalscher/php/blob/master/5.5/fpm/Dockerfile) *
